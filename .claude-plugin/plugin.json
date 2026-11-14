@@ -1,0 +1,6 @@
+{
+  "name": "usage-band",
+  "version": "0.1.0",
+  "description": "프롬프트 위 배너에 세션·주간·모델별 사용 한도를 한 줄로 보여줍니다.",
+  "types": "./types/index.d.ts"
+}
