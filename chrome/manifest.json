@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Claude 사용량 배너",
+  "version": "0.1.0",
+  "description": "claude.ai 화면에 세션·주간·모델별 사용 한도를 한 줄로 보여줍니다.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://claude.ai/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Claude 사용량 배너"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://claude.ai/*"],
+      "js": ["hook.js"],
+      "run_at": "document_start",
+      "world": "MAIN",
+      "all_frames": false
+    },
+    {
+      "matches": ["https://claude.ai/*"],
+      "js": ["band.js"],
+      "css": ["band.css"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ]
+}

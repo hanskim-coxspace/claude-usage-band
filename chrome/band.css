@@ -1,0 +1,87 @@
+#claude-usage-band {
+  position: fixed;
+  z-index: 2147483000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: calc(100vw - 32px);
+  padding: 5px 8px 5px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  color: #2b2b2b;
+  font: 12px/1.2 ui-sans-serif, -apple-system, "Segoe UI", "Malgun Gothic", system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+}
+
+#claude-usage-band[data-theme="dark"] {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(34, 34, 36, 0.92);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+  color: #e8e8e8;
+}
+
+#claude-usage-band[data-pos="bottom-right"] { right: 16px; bottom: 16px; }
+#claude-usage-band[data-pos="top-right"] { right: 16px; top: 56px; }
+#claude-usage-band[data-pos="bottom-center"] { left: 50%; bottom: 12px; transform: translateX(-50%); }
+
+#claude-usage-band .cub-col {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#claude-usage-band .cub-label { opacity: 0.8; }
+
+#claude-usage-band .cub-track {
+  display: inline-block;
+  width: 56px;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(138, 138, 138, 0.3);
+  overflow: hidden;
+}
+
+#claude-usage-band .cub-fill {
+  display: block;
+  height: 100%;
+  border-radius: 3px;
+}
+
+#claude-usage-band .cub-pct {
+  min-width: 2.6em;
+  text-align: right;
+  font-weight: 600;
+}
+
+#claude-usage-band .cub-reset { opacity: 0.6; }
+
+#claude-usage-band .cub-sep { opacity: 0.25; }
+
+#claude-usage-band .cub-note { opacity: 0.75; }
+
+#claude-usage-band .cub-close {
+  margin-left: 2px;
+  padding: 0 3px;
+  border-radius: 4px;
+  opacity: 0.4;
+  font-size: 13px;
+  line-height: 1;
+}
+
+#claude-usage-band .cub-close:hover {
+  opacity: 0.9;
+  background: rgba(138, 138, 138, 0.2);
+}
+
+@media (max-width: 720px) {
+  #claude-usage-band .cub-track { width: 34px; }
+  #claude-usage-band .cub-reset { display: none; }
+}

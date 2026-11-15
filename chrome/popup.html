@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<style>
+  body {
+    width: 240px;
+    margin: 0;
+    padding: 12px;
+    font: 13px/1.5 ui-sans-serif, "Segoe UI", "Malgun Gothic", system-ui, sans-serif;
+    color: #222;
+    background: #fff;
+  }
+  h1 { margin: 0 0 10px; font-size: 13px; }
+  label { display: flex; align-items: center; gap: 6px; margin-bottom: 10px; }
+  select { flex: 1; }
+  #status { margin: 0; padding-top: 8px; border-top: 1px solid #eee; font-size: 12px; color: #666; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e8e8e8; background: #222224; }
+    #status { border-color: #3a3a3c; color: #a8a8a8; }
+  }
+</style>
+</head>
+<body>
+  <h1>Claude 사용량 배너</h1>
+  <label><input type="checkbox" id="enabled"> 배너 표시</label>
+  <label>위치
+    <select id="position">
+      <option value="bottom-right">오른쪽 아래</option>
+      <option value="bottom-center">아래 가운데</option>
+      <option value="top-right">오른쪽 위</option>
+    </select>
+  </label>
+  <p id="status"></p>
+  <script src="popup.js"></script>
+</body>
+</html>
